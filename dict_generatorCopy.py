@@ -46,10 +46,12 @@ def subgen():
     return ndict
 
 def delegate(result, key):
+    ''' delegating generator. Serves as a board between 'main_gen()' and 'sub_gen()' '''
     while True:
         result[key] = yield from subgen()
 
 def main_gen():
+    ''' Creates main dict '''
     import pprint
     import random
     from RandomWordGenerator import RandomWord
