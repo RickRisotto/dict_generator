@@ -36,8 +36,6 @@ def subgen():
     final = {"author": author}
     i = iter(nested_dict)
     ndict = dict(zip(i, i))
-    #ndict.update(final)
-    #res = {}
     while True:
         item = yield
         if item is None:
@@ -61,8 +59,6 @@ def main_gen():
     res = str(int(random.random()))
     model = "shop_{}.book".format(for_model)
     result = {}
-    #for_result_dict = next(subgen())
-    #result.update(for_result_dict)
     val = [model, random.randrange(1, 50)]
     keys = ["model", "pk"]
     final = ','.join(('{},{}'.format(y, x) for y, x in (list(i for i in (zip(keys, val)))))).split(',')
