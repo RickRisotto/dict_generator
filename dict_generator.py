@@ -7,6 +7,8 @@
 
 
 def subgen():
+    ''' Creates a dict which will be nested to main dict as a value'''
+    
     from RandomWordGenerator import RandomWord
     import random
     import datetime
@@ -40,6 +42,7 @@ def subgen():
 
 
 def main_gen():
+    ''' Creates main dict '''
     import pprint
     import random
     from RandomWordGenerator import RandomWord
